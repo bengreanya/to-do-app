@@ -1,10 +1,10 @@
 const { useState, createContext } = require('react');
-const { getUser } = require('../services/auth');
+// const { getUser } = require('../services/auth');
 
 const UserContext = createContext();
 const UserProvider = ({ children }) => {
-  const currentUser = getUser();
-  const [user, setUser] = useState(currentUser);
+  const [user, setUser] = useState(null);
+  //   const currentUser = getUser();
   return <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>;
 };
 export { UserContext, UserProvider };
