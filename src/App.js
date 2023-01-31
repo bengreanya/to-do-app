@@ -3,11 +3,10 @@ import './App.css';
 import Header from './components/Header.js';
 import Auth from './components/Auth.js';
 import Tasks from './components/Tasks.js';
-import { useContext } from 'react';
-import { UserContext } from './context/UserContext.js';
+import { useUser } from './context/UserContext.js';
 
 function App() {
-  const { user } = useContext(UserContext);
+  const { user } = useUser();
   return (
     <div className="App">
       <Header />
