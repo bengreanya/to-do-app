@@ -16,6 +16,7 @@ const useUser = () => {
   if (!data) {
     throw new Error('useUser error!');
   }
+
   return data;
 };
 export { UserProvider, useUser };
