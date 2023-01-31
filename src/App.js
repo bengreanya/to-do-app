@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/auth/:type" component={Auth} />
-        <Route path="/tasks" component={Tasks}></Route>
+        <Route path="/tasks" component={Tasks} />
         <Route exact path="/">
           <>
             {user && <Redirect to="/tasks" />}
