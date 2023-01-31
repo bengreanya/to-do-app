@@ -6,8 +6,8 @@ import { UserContext } from '../context/UserContext.js';
 import { authUser } from '../services/auth.js';
 
 export default function Auth() {
-  const { email, setEmail } = useState('');
-  const { password, setPassword } = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { type } = useParams();
   const { setUser } = useContext(UserContext);
   const submitAuth = async (e) => {
